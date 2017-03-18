@@ -29,11 +29,5 @@
   "devDependencies": {
     "aframe": "^0.4.0",
     "webpack": "^1.13.0"
-  },
-  "semistandard": {
-    "ignore": [
-      "examples/build.js",
-      "dist/**"
-    ]
   }
 }

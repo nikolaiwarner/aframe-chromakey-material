@@ -3,13 +3,8 @@
 [![Version](http://img.shields.io/npm/v/aframe-chromakey-material.svg?style=flat-square)](https://npmjs.org/package/aframe-chromakey-material)
 [![License](http://img.shields.io/npm/l/aframe-chromakey-material.svg?style=flat-square)](https://npmjs.org/package/aframe-chromakey-material)
 
-A ahromakey material for green screen effects in [A-Frame](https://aframe.io). Provided a color, this material will remove
+A chromakey material for green screen effects in [A-Frame](https://aframe.io). Provided a color, this material will remove
 that color from the video or image source. Perfect for blockbuster hollywood effects in VR!
-
-
-A big thanks to the prior research on chromakey shaders in WebGL and Three.js by:
-https://github.com/makc/makc.github.io/tree/master/three.js/chromakey
-https://github.com/hawksley/Threex.chromakey
 
 
 ### API
@@ -55,3 +50,9 @@ Then require and use.
 require('aframe');
 require('aframe-chromakey-material');
 ```
+
+#### Credits
+
+A big thanks to the prior research on chromakey shaders in WebGL and Three.js by:
+https://github.com/makc/makc.github.io/tree/master/three.js/chromakey
+https://github.com/hawksley/Threex.chromakey
