@@ -11,7 +11,7 @@ that color from the video or image source. Perfect for blockbuster hollywood eff
 
 | Property | Description | Default Value |
 | -------- | ----------- | ------------- |
-| color    | Color to key from source. This is a vec3 of rgb values. | {x: 0.1, y: 0.9, z: 0.2} |
+| color    | Color to key from source. This is a vec3 of rgb values. Default is greenish. | 0.1 0.9 0.2 |
 
 ### Installation
 
@@ -31,7 +31,7 @@ Install and use by directly including the [browser files](dist):
     <a-assets>
       <video id="greenscreenvideo" src="greenscreenvideo.mp4" loop autoplay muted />
     </a-assets>
-    <a-entity material="shader: chromakey; src: #greenscreenvideo; color: {x: 0.1, y: 0.9, z: 0.2}" geometry="primitive: box"></a-entity>
+    <a-entity material="shader: chromakey; src: #greenscreenvideo; color: 0.1 0.9 0.2" geometry="primitive: box"></a-entity>
   </a-scene>
 </body>
 ```
