@@ -1,0 +1,39 @@
+{
+  "name": "aframe-chromakey-material",
+  "version": "1.0.0",
+  "description": "A chromakey material for A-Frame.",
+  "main": "index.js",
+  "cdn": "dist/aframe-chromakey-material.min.js",
+  "scripts": {
+    "dist": "webpack index.js dist/aframe-chromakey-material.js && webpack -p index.js dist/aframe-chromakey-material.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myusername/aframe-chromakey-material.git"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-vr",
+    "vr",
+    "mozvr",
+    "webvr",
+    "chromakey",
+    "video"
+  ],
+  "author": "Nick Warner <nick@nwarner.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikolaiwarner/aframe-chromakey-material/issues"
+  },
+  "homepage": "https://github.com/nikolaiwarner/aframe-chromakey-material#readme",
+  "devDependencies": {
+    "aframe": "^0.4.0",
+    "webpack": "^1.13.0"
+  },
+  "semistandard": {
+    "ignore": [
+      "examples/build.js",
+      "dist/**"
+    ]
+  }
+}
