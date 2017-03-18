@@ -7,6 +7,9 @@ A chromakey material for green screen effects in [A-Frame](https://aframe.io). P
 that color from the video or image source. Perfect for blockbuster hollywood effects in VR!
 
 
+![chasevr](https://cloud.githubusercontent.com/assets/40796/24076948/2158fba4-0c14-11e7-8bee-72507f4339fa.jpg)
+
+
 ### API
 
 | Property | Description | Default Value |
