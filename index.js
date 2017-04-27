@@ -6,27 +6,52 @@ AFRAME.registerShader('chromakey', {
   schema: {
     src: {type: 'map'},
     color: {default: {x: 0.1, y: 0.9, z: 0.2}, type: 'vec3', is: 'uniform'},
-    transparent: {default: true}
+    transparent: {default: true, is: 'uniform'}
+  },
+
+  init: function (data) {
+    var videoTexture = new THREE.VideoTexture(data.src)
+    videoTexture.minFilter = THREE.LinearFilter
+    this.material = new THREE.ShaderMaterial({
+      uniforms: {
+        color: {
+          type: 'c',
+          value: data.color
+        },
+        texture: {
+          type: 't',
+          value: videoTexture
+        }
+      },
+      vertexShader: this.vertexShader,
+      fragmentShader: this.fragmentShader
+    })
+  },
+
+  update: function (data) {
+    this.material.color = data.color
+    this.material.src = data.src
+    this.material.transparent = data.transparent
   },
 
   vertexShader: [
-    'varying mediump vec2 vUv;',
+    'varying vec2 vUv;',
     'void main(void)',
     '{',
     'vUv = uv;',
-    'mediump vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );',
+    'vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );',
     'gl_Position = projectionMatrix * mvPosition;',
     '}'
   ].join('\n'),
 
   fragmentShader: [
-    'uniform mediump sampler2D texture;',
-    'uniform mediump vec3 color;',
-    'varying mediump vec2 vUv;',
+    'uniform sampler2D texture;',
+    'uniform vec3 color;',
+    'varying vec2 vUv;',
     'void main(void)',
     '{',
-    'mediump vec3 tColor = texture2D( texture, vUv ).rgb;',
-    'mediump float a = (length(tColor - color) - 0.5) * 7.0;',
+    'vec3 tColor = texture2D( texture, vUv ).rgb;',
+    'float a = (length(tColor - color) - 0.5) * 7.0;',
     'gl_FragColor = vec4(tColor, a);',
     '}'
   ].join('\n')

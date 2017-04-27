@@ -25,7 +25,7 @@ Install and use by directly including the [browser files](dist):
 ```html
 <head>
   <title>My A-Frame Scene</title>
-  <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
 </head>
 
@@ -41,7 +41,7 @@ Install and use by directly including the [browser files](dist):
 
 #### npm
 
-Install via npm:
+Install via npm/yarn:
 
 ```bash
 npm install aframe-chromakey-material
@@ -50,8 +50,8 @@ npm install aframe-chromakey-material
 Then require and use.
 
 ```js
-require('aframe');
-require('aframe-chromakey-material');
+import 'aframe';
+import 'aframe-chromakey-material';
 ```
 
 #### Credits
