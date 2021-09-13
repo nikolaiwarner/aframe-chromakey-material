@@ -1,6 +1,6 @@
 {
   "name": "aframe-chromakey-material",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A chromakey material for A-Frame.",
   "main": "index.js",
   "cdn": "dist/aframe-chromakey-material.min.js",
