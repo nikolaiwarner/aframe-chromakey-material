@@ -1,11 +1,12 @@
 {
   "name": "aframe-chromakey-material",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "A chromakey material for A-Frame.",
   "main": "index.js",
+  "mode": "production",
   "cdn": "dist/aframe-chromakey-material.min.js",
   "scripts": {
-    "dist": "webpack index.js dist/aframe-chromakey-material.js && webpack -p index.js dist/aframe-chromakey-material.min.js"
+    "dist": "webpack --mode development ./index.js --output-filename aframe-chromakey-material.js && webpack --mode production ./index.js --output-filename aframe-chromakey-material.min.js"
   },
   "repository": {
     "type": "git",
@@ -20,14 +21,15 @@
     "chromakey",
     "video"
   ],
-  "author": "Nick Warner <nick@nwarner.com>",
+  "author": "nikolaiwarner",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nikolaiwarner/aframe-chromakey-material/issues"
   },
   "homepage": "https://github.com/nikolaiwarner/aframe-chromakey-material#readme",
   "devDependencies": {
-    "aframe": "^0.4.0",
-    "webpack": "^1.13.0"
+    "aframe": "^1.2.0",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
   }
 }

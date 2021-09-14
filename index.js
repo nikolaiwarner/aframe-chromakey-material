@@ -18,7 +18,7 @@ AFRAME.registerShader('chromakey', {
           type: 'c',
           value: data.color
         },
-        texture: {
+        myTexture: {
           type: 't',
           value: videoTexture
         }
